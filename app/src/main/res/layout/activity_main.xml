@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center|top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:textSize="40dp"
+        android:text="Amazing quiz app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- Make it fill rest of screen (puts buttons at the bottom) -->
+    <TextView
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp" />
+
+    <LinearLayout
+        android:gravity="center|top"
+        android:orientation="vertical"
+        android:layout_marginBottom="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:onClick="clikedQuiz"
+            android:textSize="30dp"
+            android:text="try quiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:onClick="clickedAdd"
+            android:textSize="30dp"
+            android:text="add quiz question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:onClick="clickedClear"
+            android:textSize="30dp"
+            android:text="clear questions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</LinearLayout>
