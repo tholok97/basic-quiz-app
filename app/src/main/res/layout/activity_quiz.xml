@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+    <!-- indicates what question we're on -->
     <TextView
         android:textSize="40dp"
         android:text="Question x/x"
@@ -13,34 +14,49 @@
 
     <!-- Make it fill rest of screen (puts stuff at the bottom) -->
     <TextView
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:layout_width="wrap_content"
         android:layout_height="0dp" />
 
-    <GridLayout
-       android:layout_height="wrap_content">
+    <!-- first row of buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp">
 
         <Button
             android:text="Alt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
 
         <Button
             android:text="Alt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <!-- second row of buttons -->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp">
 
         <Button
             android:text="Alt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
 
         <Button
             android:text="Alt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
 
-    </GridLayout>
+    </LinearLayout>
 
 </LinearLayout>
 
