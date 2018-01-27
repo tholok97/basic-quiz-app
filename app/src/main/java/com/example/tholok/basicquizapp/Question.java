@@ -15,7 +15,6 @@ class Question {
     String alt4;
     int correct;
 
-
     /**
      * auto-generated constructor
      * @param question
@@ -25,7 +24,8 @@ class Question {
      * @param alt4
      * @param correct
      */
-    public Question(String question, String alt1, String alt2, String alt3, String alt4, int correct) {
+    public Question(String question, String alt1, String alt2, String alt3, String alt4,
+                    int correct) {
         this.question = question;
         this.alt1 = alt1;
         this.alt2 = alt2;
