@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -54,7 +55,23 @@ public class QuizStore {
 
         ArrayList<Question> quiz = new ArrayList<>();
 
-        quiz.add(new Question("What's the meaning of life?", "3", "2", "923", "42"));
+        quiz.add(new Question(
+                "What's the meaning of life?",
+                "3",
+                "2",
+                "923",
+                "42",
+                3
+        ));
+
+        quiz.add(new Question(
+                "What's 3+3?",
+                "6",
+                "3",
+                "horse",
+                "1",
+                1
+        ));
 
         return quiz;
     }
@@ -71,5 +88,4 @@ public class QuizStore {
         editor.clear();
         editor.apply();
     }
-
 }

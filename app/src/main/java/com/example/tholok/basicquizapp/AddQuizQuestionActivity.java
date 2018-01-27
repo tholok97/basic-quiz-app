@@ -30,13 +30,14 @@ public class AddQuizQuestionActivity extends Activity {
         EditText alt3ET = (EditText) findViewById(R.id.alt3);
         EditText alt4ET = (EditText) findViewById(R.id.alt4);
 
-        // make question object based on contenst
+        // make question object based on contents
         Question question = new Question(
                 questionET.getText().toString(),
                 alt1ET.getText().toString(),
                 alt2ET.getText().toString(),
                 alt3ET.getText().toString(),
-                alt4ET.getText().toString()
+                alt4ET.getText().toString(),
+                1
         );
 
         return question;

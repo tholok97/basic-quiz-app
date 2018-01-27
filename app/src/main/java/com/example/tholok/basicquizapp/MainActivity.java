@@ -21,8 +21,11 @@ public class MainActivity extends Activity {
      */
     void clikedQuiz(View view) {
 
-        // <NOP>
-        Toast.makeText(this, "Not implemented!", Toast.LENGTH_LONG).show();
+        // create intent
+        Intent intent = new Intent(this, QuizActivity.class);
+
+        // start activity
+        startActivity(intent);
     }
 
     /**

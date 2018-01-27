@@ -13,6 +13,8 @@ class Question {
     String alt2;
     String alt3;
     String alt4;
+    int correct;
+
 
     /**
      * auto-generated constructor
@@ -21,14 +23,17 @@ class Question {
      * @param alt2
      * @param alt3
      * @param alt4
+     * @param correct
      */
-    Question(String question, String alt1, String alt2, String alt3, String alt4) {
+    public Question(String question, String alt1, String alt2, String alt3, String alt4, int correct) {
         this.question = question;
         this.alt1 = alt1;
         this.alt2 = alt2;
         this.alt3 = alt3;
         this.alt4 = alt4;
+        this.correct = correct;
     }
+
 
     String toPrefFormat() {
 

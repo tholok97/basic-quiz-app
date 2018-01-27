@@ -7,8 +7,9 @@
 
     <!-- indicates what question we're on -->
     <TextView
+        android:id="@+id/questionNumTxt"
         android:textSize="40dp"
-        android:text="Question x/x"
+        android:text="Question [x/x]"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
@@ -19,6 +20,9 @@
 
     <!-- question -->
     <TextView
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:id="@+id/question"
         android:gravity="center_horizontal"
         android:layout_weight="2"
         android:text="[Question]"
@@ -38,13 +42,17 @@
         android:layout_height="0dp">
 
         <Button
-            android:text="Alt"
+            android:onClick="onClick"
+            android:id="@+id/alt1"
+            android:text="[Alt1]"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent" />
 
         <Button
-            android:text="Alt"
+            android:onClick="onClick"
+            android:id="@+id/alt2"
+            android:text="[Alt2]"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent" />
@@ -58,13 +66,17 @@
             android:layout_height="0dp">
 
         <Button
-            android:text="Alt"
+            android:onClick="onClick"
+            android:id="@+id/alt3"
+            android:text="[Alt3]"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent" />
 
         <Button
-            android:text="Alt"
+            android:onClick="onClick"
+            android:id="@+id/alt4"
+            android:text="[Alt4]"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent" />
