@@ -11,6 +11,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+    <TextView
+        android:text="(check off the correct one)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
     <!-- Make it fill rest of screen (puts stuff at the bottom) -->
     <TextView
         android:layout_weight="1"
@@ -34,38 +39,90 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <EditText
-            android:inputType="text"
-            android:maxLines="1"
-            android:id="@+id/alt1"
-            android:hint="Alternative 1"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content">
 
-        <EditText
-            android:inputType="text"
-            android:maxLines="1"
-            android:id="@+id/alt2"
-            android:hint="Alternative 2"
+            <EditText
+                android:inputType="text"
+                android:maxLines="1"
+                android:id="@+id/alt1"
+                android:hint="Alternative 1"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:onClick="correctChange"
+                android:id="@+id/radioAlt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content">
 
-        <EditText
-            android:inputType="text"
-            android:maxLines="1"
-            android:id="@+id/alt3"
-            android:hint="Alternative 3"
+            <EditText
+                android:inputType="text"
+                android:maxLines="1"
+                android:id="@+id/alt2"
+                android:hint="Alternative 2"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:onClick="correctChange"
+                android:id="@+id/radioAlt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content">
 
-        <EditText
-            android:inputType="text"
-            android:maxLines="1"
-            android:id="@+id/alt4"
+            <EditText
+                android:inputType="text"
+                android:maxLines="1"
+                android:id="@+id/alt3"
+                android:hint="Alternative 3"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:onClick="correctChange"
+                android:id="@+id/radioAlt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
             android:layout_marginBottom="40dp"
-            android:hint="Alternative 4"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:inputType="text"
+                android:maxLines="1"
+                android:id="@+id/alt4"
+                android:hint="Alternative 4"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:onClick="correctChange"
+                android:id="@+id/radioAlt4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
 
         <Button
             android:onClick="clickedSubmit"

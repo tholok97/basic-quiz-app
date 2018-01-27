@@ -54,7 +54,7 @@ public class QuizStore {
 
         ArrayList<Question> quiz = new ArrayList<>();
 
-        quiz.add(new Question("What's the meaning of life?", "3", "2", "923", "42"));
+        //quiz.add(new Question("What's the meaning of life?", "3", "2", "923", "42"));
 
         return quiz;
     }
