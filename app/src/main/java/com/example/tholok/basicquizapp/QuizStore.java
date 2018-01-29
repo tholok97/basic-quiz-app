@@ -33,8 +33,13 @@ public class QuizStore {
         // get quiz string from prefs
         String quizString = prefs.getString(QUIZ_PREF_NAME, "");
 
+        // add | if not empty
+        if (!quizString.isEmpty()) {
+            quizString = quizString.concat("|");
+        }
+
         // append this quiz
-        quizString = quizString.concat("|" + question.toPrefFormat());
+        quizString = quizString.concat(question.toPrefFormat());
 
         // store it back again
         editor.putString(QUIZ_PREF_NAME, quizString);
@@ -50,28 +55,51 @@ public class QuizStore {
      */
     static ArrayList<Question> loadQuiz(Context ctx) {
 
-
-        // DUMMY QUESTION FOR TESTING
-
+        // arrayliist to fill with quizzes
         ArrayList<Question> quiz = new ArrayList<>();
 
-        quiz.add(new Question(
-                "What's the meaning of life?",
-                "3",
-                "2",
-                "923",
-                "42",
-                3
-        ));
+        // get pref string
+        SharedPreferences prefs = ctx.getSharedPreferences(QUIZ_PREF_FILE, Context.MODE_PRIVATE);
+        String quizString = prefs.getString(QUIZ_PREF_NAME, "");
 
-        quiz.add(new Question(
-                "What's 3+3?",
-                "6",
-                "3",
-                "horse",
-                "1",
-                1
-        ));
+        // PARSE:
+
+        // split on | (per question)
+        String[] questions = quizString.split("\\|");
+
+
+        // DEBUG
+        Log.d("question", "questions incomming.. (" + quizString + ")");
+
+        // build quiz from questions
+        for (String questionString : questions) {
+
+            // split on & (per property)
+            String properties[] = questionString.split("&");
+
+            // DEBUG
+            Log.d("question", ">" + questionString);
+            for (String propertyString : properties) {
+                // DEBUG
+                Log.d("question", ">>" + propertyString);
+            }
+
+            // build questino from properties
+            Question question = new Question(
+                    properties[0],
+                    properties[1],
+                    properties[2],
+                    properties[3],
+                    properties[4],
+                    Integer.parseInt(properties[5])
+            );
+
+            // add question to quiz
+            quiz.add(question);
+        }
+
+        // DEBUG
+        Log.d("question", "questions done..");
 
         return quiz;
     }
