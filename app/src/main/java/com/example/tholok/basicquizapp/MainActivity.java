@@ -21,6 +21,12 @@ public class MainActivity extends Activity {
      */
     void clikedQuiz(View view) {
 
+        // if no quizzes, don't allow to enter quiz activity
+        if (QuizStore.isEmpty(this)) {
+            Toast.makeText(this, "No quizes! Add some first", Toast.LENGTH_LONG).show();
+            return;
+        }
+
         // create intent
         Intent intent = new Intent(this, QuizActivity.class);
 

@@ -62,6 +62,11 @@ public class QuizStore {
         SharedPreferences prefs = ctx.getSharedPreferences(QUIZ_PREF_FILE, Context.MODE_PRIVATE);
         String quizString = prefs.getString(QUIZ_PREF_NAME, "");
 
+        // if empty -> early return
+        if (quizString.isEmpty()) {
+            return quiz;
+        }
+
         // PARSE:
 
         // split on | (per question)
@@ -102,6 +107,10 @@ public class QuizStore {
         Log.d("question", "questions done..");
 
         return quiz;
+    }
+
+    static boolean isEmpty(Context ctx) {
+        return loadQuiz(ctx).isEmpty();
     }
 
     /**
